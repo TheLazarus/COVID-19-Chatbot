@@ -1,0 +1,171 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- query_corona
+- query_corona_location
+- query_corona_symptoms
+- query_corona_spread
+- query_corona_spread_person
+- query_corona_spread_person_sexually
+- query_corona_isolation
+- query_corona_protection
+- query_corona_protection_others
+- query_corona_protection_methods_contact
+- query_corona_no_symptoms_quarantine
+- query_corona_age
+- query_corona_vaccination
+- query_corona_symptoms_develop
+- query_corona_surface_lifetime
+- query_corona_self_cure
+- query_corona_transmission_grocery
+- query_corona_more_info
+- query_corona_find_hospitals
+- query_corona_find_hospitals_no_loc
+entities:
+- location
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: Here is something to cheer you up.
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_query_corona:
+  - text: Coronaviruses are a large family of viruses which may cause illness in animals
+      or humans.
+  - text: Coronavirus disease (COVID-19) is an infectious disease caused by a newly
+      discovered coronavirus.
+  - text: The coronavirus is a family of viruses that can cause a range of illness
+      in humans including common cold and more severe forms like SARS and MERS which
+      are life-threatening.
+  utter_query_corona_symptoms:
+  - text: The most common symptoms of COVID-19 are fever, dry cough, and tiredness.Some
+      patients may have aches and pains, nasal congestion, sore throat or diarrhea.These
+      symptoms are usually mild and begin gradually.
+  utter_query_corona_spread:
+  - text: People can catch COVID-19 from others who have the virus. The disease spreads
+      primarily from person to person through small droplets from the nose or mouth,
+      which are expelled when a person with COVID-19 coughs or sneezes.
+  utter_query_corona_spread_person:
+  - text: COVID-19 is mainly spread through respiratory droplets expelled by someone
+      who is coughing or has other symptoms such as fever or tiredness. Many people
+      with COVID-19 experience only mild symptoms.
+  utter_query_corona_spread_person_sexually:
+  - text: Based on current evidence, coronavirus – the virus that causes COVID-19
+      illness – is not present in the sexual fluids of someone with the virus
+  utter_query_corona_isolation:
+  - text: Self-isolation is an important measure taken by those who have COVID-19
+      symptoms to avoid infecting others in the community, including family members.
+  - text: Self-isolation is when a person who is experiencing fever, cough or other
+      COVID-19 symptoms stays at home and does not go to work, school or public places.
+  utter_query_corona_protection:
+  - text: Regularly and thoroughly clean your hands with an alcohol-based hand rub
+      or wash them with soap and water. Why? Washing your hands with soap and water
+      or using alcohol-based hand rub kills viruses that may be on your hands.
+  - text: Maintain at least 1 metre (3 feet) distance between yourself and others.
+      Why? When someone coughs, sneezes, or speaks they spray small liquid droplets
+      from their nose or mouth which may contain virus.
+  - text: Avoid going to crowded places. Why? Where people come together in crowds,
+      you are more likely to come into close contact with someone that has COIVD-19
+      and it is more difficult to maintain physical distance of 1 metre (3 feet).
+  - text: Avoid touching eyes, nose and mouth. Why? Hands touch many surfaces and
+      can pick up viruses. Once contaminated, hands can transfer the virus to your
+      eyes, nose or mouth. From there, the virus can enter your body and infect you.
+  - text: Make sure you, and the people around you, follow good respiratory hygiene.
+      This means covering your mouth and nose with your bent elbow or tissue when
+      you cough or sneeze.
+  - text: Stay home and self-isolate even with minor symptoms such as cough, headache,
+      mild fever, until you recover. Have someone bring you supplies. If you need
+      to leave your house, wear a mask to avoid infecting others.
+  - text: If you have a fever, cough and difficulty breathing, seek medical attention,
+      but call by telephone in advance if possible and follow the directions of your
+      local health authority.
+  utter_query_corona_protection_others:
+  - text: Practicing hand and respiratory hygiene is important at ALL times and is
+      the best way to protect others and yourself.
+  - text: When possible maintain at least a 1 metre (3 feet) distance between yourself
+      and others. This is especially important if you are standing by someone who
+      is coughing or sneezing.
+  utter_query_corona_protection_methods_contact:
+  - text: If you become ill, even with very mild symptoms you must self-isolate
+  - text: Even if you don’t think you have been exposed to COVID-19 but develop symptoms,
+      then self-isolate and monitor yourself
+  - text: You are more likely to infect others in the early stages of the disease
+      when you just have mild symptoms, therefore early self-isolation is very important.
+  - text: If you do not have symptoms, but have been exposed to an infected person,
+      self-quarantine for 14 days.
+  - text: If you start to show severe symptoms, please get yourself checked as quickly
+      as possible at a nearby testing station.
+  utter_query_no_symptoms_quarantine:
+  - text: Have a large, well-ventilated single room with hand hygiene and toilet facilities
+  - text: If this is not available place beds at least 1 metre apart.
+  - text: Keep at least 1-metre distance from others, even from your family members.
+  - text: Monitor your symptoms daily.
+  - text: Self-quarantine for 14 days, even if you feel healthy.
+  utter_query_corona_age:
+  - text: Research indicates that children and adolescents are just as likely to become
+      infected as any other age group and can spread the disease.Evidence to date
+      suggests that children and young adults are less likely to get it.
+  - text: Old people are more more vulnerable to this infection, so they should take
+      more strict measures.
+  utter_query_corona_vaccination:
+  - text: Not yet. To date, there is no vaccine and no specific antiviral medicines
+      against COVID-19.
+  utter_query_corona_symptoms_develop:
+  - text: The time between exposure to COVID-19 and the moment when symptoms start
+      is commonly around five to six days but can range from 1 – 14 days.
+  utter_query_corona_surface_lifetime:
+  - text: NaNs
+  utter_query_corona_self_cure:
+  - text: There is currently no cure for Coronavirus(COVID-19), All these claims that
+      say that we can kill Coronavirus by drinkng alcohol, insecticides, or by taking
+      heavy steam are false.
+  utter_query_corona_transmission_grocery:
+  - text: If possible, sanitize the handles of shopping trolleys or baskets before
+      shopping. Once home, wash your hands thoroughly and also after handling and
+      storing your purchased products.
+  - text: There is currently no confirmed case of COVID-19 transmitted through food
+      or food packaging.
+  - text: Wash Fruits and Vegetables the same way you should do under any circumstance,
+      before handling them, wash your hands with soap and water. Then, wash fruits
+      and vegetables thoroughly with clean water.
+actions:
+- action_query_corona_location
+- action_query_corona_find_hospitals
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_query_corona
+- utter_query_corona_symptoms
+- utter_query_corona_spread
+- utter_query_corona_spread_person
+- utter_query_corona_spread_person_sexually
+- utter_query_corona_isolation
+- utter_query_corona_protection
+- utter_query_corona_protection_others
+- utter_query_corona_protection_methods_contact
+- utter_query_corona_no_symptoms_quarantine
+- utter_query_corona_age
+- utter_query_corona_vaccination
+- utter_query_corona_symptoms_develop
+- utter_query_corona_surface_lifetime
+- utter_query_corona_self_cure
+- utter_query_corona_transmission_grocery
+- utter_query_no_symptoms_quarantine
