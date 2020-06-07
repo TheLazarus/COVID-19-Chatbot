@@ -11,8 +11,9 @@ class updateManager():
 
 	def __init__(self): # Connecting to the MySQL service
 		self.mydb = mysql.connector.connect(host='localhost',user='admin',passwd='admin')
-		self.state_data_api = 'https://api.covid19india.org/data.json'
-		self.district_data_api = 'https://api.covid19india.org/state_district_wise.json'
+		self.state_data_endpoint = 'https://api.covid19india.org/data.json'
+		self.district_data_endpoint = 'https://api.covid19india.org/state_district_wise.json'
+		self.country_endpoint = 'https://api.covid19api.com/summary'
 
 
 	def pullJSONData(self,api):
@@ -29,9 +30,10 @@ class updateManager():
 		print("[FLUSHING OLD DATA]")
 		self.cursor.execute("DELETE FROM state_stats")
 		self.cursor.execute("DELETE FROM district_stats")
+		self.cursor.execute("DELETE FROM country_stats")
 		mydb.commit()
 
-		jsonData = self.pullJSONData(self.state_data_api) #UPDATING STATEWISE INFORMATION
+		jsonData = self.pullJSONData(self.state_data_endpoint) #UPDATING STATEWISE INFORMATION
 
 
 		print("[PROGRESS]")
@@ -45,7 +47,7 @@ class updateManager():
 
 			self.cursor.execute("INSERT INTO state_stats VALUES(%s,%s,%s,%s,%s,%s)",(state, int(active), int(confirmed),int(recovered), int(deaths), source))
 
-		jsonData = self.pullJSONData(self.district_data_api)
+		jsonData = self.pullJSONData(self.district_data_endpoint)
 
 		print("[PROGRESS]")
 
@@ -61,10 +63,37 @@ class updateManager():
 
 					self.cursor.execute("INSERT INTO district_stats VALUES(%s,%s,%s,%s,%s,%s)",(district,state,int(act),int(conf),int(rec),int(died)))
 
-		print("[CLEARING OLD INDICES]")
-		self.cursor.execute("DROP INDEX district_index on district_stats")
+		jsonData = self.pullJSONData(self.country_endpoint)
+
+		print("[PROGRESS]")
+
+		for country_id in tqdm(range(0,len(jsonData['Countries']))):
+			country = jsonData['Countries'][country_id]['Country']
+			NewConfirmed = jsonData['Countries'][country_id]['NewConfirmed']
+			TotalConfirmed = jsonData['Countries'][country_id]['TotalConfirmed']
+			NewDeaths = jsonData['Countries'][country_id]['NewDeaths']
+			TotalDeaths = jsonData['Countries'][country_id]['TotalDeaths']
+			NewRecovered = jsonData['Countries'][country_id]['NewRecovered']
+			TotalRecovered = jsonData['Countries'][country_id]['TotalRecovered']
+			source = 'https://api.covid19api.com/summary'
+
+			self.cursor.execute("INSERT INTO country_stats VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",(country,int(NewConfirmed),int(TotalConfirmed),int(NewDeaths),int(TotalDeaths),int(NewRecovered),int(TotalRecovered),source))
+
+		print("[CHECKING FOR OLD INDICES]")
+		self.cursor.execute("SHOW INDEX FROM district_stats")
+		d_index = self.cursor.fetchall()
+		if(d_index != None):
+			print("[CLEARING OLD INDEX]")
+			self.cursor.execute("DROP INDEX district_index on district_stats")
+		self.cursor.execute("SHOW INDEX FROM country_stats")
+		c_index = self.cursor.fetchall()
+		if(c_index != None):
+			print("[CLEARING OLD INDEX]")
+			self.cursor.execute("DROP INDEX country_index on country_stats")
+
 		print("[BUILDING NEW INDICES]")
 		self.cursor.execute("CREATE INDEX district_index ON district_stats(district)")
+		self.cursor.execute("CREATE INDEX country_index ON country_stats(country)")
 		print("[FINALIZING]")
 		mydb.commit()
 		print("[UPDATE SUCCESSFUL]")
