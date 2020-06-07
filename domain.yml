@@ -19,7 +19,6 @@ intents:
 - query_corona_protection
 - query_corona_protection_others
 - query_corona_protection_methods_contact
-- query_corona_no_symptoms_quarantine
 - query_corona_age
 - query_corona_vaccination
 - query_corona_symptoms_develop
@@ -27,8 +26,6 @@ intents:
 - query_corona_self_cure
 - query_corona_transmission_grocery
 - query_corona_more_info
-- query_corona_find_hospitals
-- query_corona_find_hospitals_no_loc
 entities:
 - location
 responses:
@@ -145,7 +142,6 @@ responses:
       and vegetables thoroughly with clean water.
 actions:
 - action_query_corona_location
-- action_query_corona_find_hospitals
 - utter_greet
 - utter_cheer_up
 - utter_did_that_help
@@ -161,7 +157,6 @@ actions:
 - utter_query_corona_protection
 - utter_query_corona_protection_others
 - utter_query_corona_protection_methods_contact
-- utter_query_corona_no_symptoms_quarantine
 - utter_query_corona_age
 - utter_query_corona_vaccination
 - utter_query_corona_symptoms_develop
