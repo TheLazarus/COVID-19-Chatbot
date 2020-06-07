@@ -90,11 +90,6 @@
 * query_corona_protection_methods_contact
   - utter_query_corona_protection_methods_contact
 
-## corona_query_path 12
-
-* query_corona_no_symptoms_quarantine
-  - utter_query_corona_no_symptoms_quarantine
-
 ## corona_query_path 13
 
 * query_corona_age
@@ -147,7 +142,3 @@
   - utter_query_corona_protection
 * query_corona_more_info
   - utter_query_corona_protection
-
-## corona_query_path 22
-* query_corona_find_hospitals
-  - action_query_corona_find_hospitals
