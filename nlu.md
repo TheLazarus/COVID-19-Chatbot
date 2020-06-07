@@ -100,6 +100,100 @@
 - What about [Solan](location)?
 - Do you know about corona virus spread in [Kollam](location)?
 - In [Punjab](location) what is the status of virus spread?
+- What's the status in [Afghanistan](location)                     
+- What's the status in [Albania](location)                             
+- What's the status in [Algeria](location)                             
+- What's the status in [Andorra](location)                             
+- What's the status in [Angola](location)                              
+- What's the status in [Antigua and Barbuda](location)                 
+- What's the status in [Argentina](location)                           
+- What's the status in [Armenia](location)                             
+- What's the status in [Australia](location)                           
+- What's the status in [Austria](location)                            
+- What's the status in [Azerbaijan](location)                          
+- What's the status in [Bahamas](location)                             
+- What's the status in [Bahrain](location)                             
+- What's the status in [Bangladesh](location)                          
+- What's the status in [Barbados](location)                            
+- What's the status in [Belarus](location)                             
+- What's the status in [Belgium](location)                             
+- What's the status in [Belize](location)                              
+- What's the status in [Benin](location)                               
+- What's the status in [Brazil](location)                              
+- What's the status in [Cambodia](location)                        
+- What's the status in [Cameroon](location)                      
+- What's the status in [Canada](location)                              
+- What's the status in [Chile](location)                               
+- What's the status in [China](location)                               
+- What's the status in [Cuba](location)                                
+- What's the status in [Cyprus](location)                              
+- What's the status in [Czech Republic](location)                      
+- What's the status in [Denmark](location)                                              
+- What's the status in [Egypt](location)                               
+- What's the status in [Ethiopia](location)                            
+- What's the status in [Fiji](location)                                
+- What's the status in [Finland](location)                             
+- What's the status in [France](location)                              
+- What's the status in [Germany](location)                         
+- What's the status in [Ghana](location)                               
+- What's the status in [Greece](location)                                                   
+- What's the status in [Guatemala](location)                           
+- What's the status in [Hungary](location)                             
+- What's the status in [Iceland](location)                             
+- What's the status in [India](location)                               
+- What's the status in [Indonesia](location)                           
+- What's the status in [Iran Republic of](location)           
+- What's the status in [Iraq](location)                                
+- What's the status in [Ireland](location)                             
+- What's the status in [Israel](location)                              
+- What's the status in [Italy](location)                               
+- What's the status in [Japan](location)                               
+- What's the status in [Kazakhstan](location)                          
+- What's the status in [South Korea](location)                     
+- What's the status in [Kuwait](location)                                       
+- What's the status in [Madagascar](location)    
+- What's the status in [Mexico](location)                              
+- What's the status in [Morocco](location)                             
+- What's the status in [Myanmar](location)                             
+- What's the status in [Nepal](location)                               
+- What's the status in [Netherlands](location)                         
+- What's the status in [New Zealand](location)                         
+- What's the status in [Nigeria](location)                             
+- What's the status in [Norway](location)                              
+- What's the status in [Oman](location)                                
+- What's the status in [Pakistan](location)                            
+- What's the status in [Peru](location)                                
+- What's the status in [Philippines](location)                         
+- What's the status in [Poland](location)                              
+- What's the status in [Portugal](location)                            
+- What's the status in [Qatar](location)                                        
+- What's the status in [Russian Federation](location)                  
+- What's the status in [Rwanda](location)                                      
+- What's the status in [Saudi Arabia](location)                                             
+- What's the status in [Serbia](location)                                                    
+- What's the status in [Sierra Leone](location)                        
+- What's the status in [Singapore](location)                                            
+- What's the status in [South Africa](location)                        
+- What's the status in [South Sudan](location)                         
+- What's the status in [Spain](location)                               
+- What's the status in [Sri Lanka](location)                           
+- What's the status in [Sudan](location)                                                   
+- What's the status in [Sweden](location)                              
+- What's the status in [Switzerland](location)                          
+- What's the status in [Taiwan, Republic of China](location)           
+- What's the status in [Tajikistan](location)                                          
+- What's the status in [Timor-Leste](location)                                    
+- What's the status in [Turkey](location)                              
+- What's the status in [Uganda](location)                              
+- What's the status in [Ukraine](location)                             
+- What's the status in [United Arab Emirates](location)                
+- What's the status in [United Kingdom](location)                      
+- What's the status in [United States of America](location)            
+- What's the status in [Viet Nam](location)                                        
+- What's the status in [Zambia](location)                              
+- What's the status in [Zimbabwe](location)  
+- Latest covid-19 information in [Indonesia](location)
+- covid-19 info in [United States of America](location)                
 
 ## intent:query_corona
 - Do you know about corona virus?
@@ -240,16 +334,19 @@
 - more information
 - some other method?
 
-## intent:query_corona_find_hospitals_no_loc
-- Can you find a medical hospital near me?
-- Can you please find a hospital near my location?
-- I need to go a hospital right now?
-- Please find a hospital near me.
+## synonym:United States of America
+- USA
+- US
+- States
 
-## intent:query_corona_find_hospitals
+## synonym:United Kingdom
 
-- I need a hospital near [Shimla](hd_location)
-- I want a hospital near [Sirmour](hd_location)
-- Can you list hospitals in [Faridabad](hd_location)
-- Please list hospitals near [Gurgaon](hd_location)
-- Please list hospitals in [Nellore](hd_location)
+- UK
+
+## synonym:Russian Federation
+
+- Russia
+
+## synonym:Taiwan, Republic of China
+
+- Taiwan
